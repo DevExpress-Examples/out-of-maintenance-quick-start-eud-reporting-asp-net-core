@@ -2,6 +2,7 @@
 *Files to look at*:
 * [Startup.cs](./CS/EndUserDesignerExample/Startup.cs) 
 * [MyReportStorageWebExtension.cs](./CS/EndUserDesignerExample/Services/MyReportStorageWebExtension.cs)
+* [Index.cshtml](./CS/EndUserDesignerExample/Views/Home/Index.cshtml)
 <!-- default file list end -->
 
 # How to Add an End-User Report Designer to an ASP.NET Core Application
