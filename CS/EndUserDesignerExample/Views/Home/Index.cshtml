@@ -42,6 +42,17 @@
 <script src="~/node_modules/devexpress-reporting/dist/js/dx-webdocumentviewer.min.js"></script>
 <script src="~/node_modules/devexpress-reporting/dist/js/dx-reportdesigner.min.js"></script>
 
+<!--Fix ace module urls-->
+<script>
+var aceConfig = ace && ace.config;
+if (aceConfig) {
+aceConfig.setModuleUrl('ace/mode/json', '@Url.Content("~/js/ace/mode-json.js")');
+aceConfig.setModuleUrl('ace/mode/json_worker', '@Url.Content("~/js/ace/worker-json.js")');
+aceConfig.setModuleUrl('ace/theme/dreamweaver', '@Url.Content("~/js/ace/theme-dreamweaver.js")');
+aceConfig.setModuleUrl('ace/theme/ambiance', '@Url.Content("~/js/ace/theme-ambiance.js")');
+}
+</script>
+<!-- -->
 
 
 @{
