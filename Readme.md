@@ -1,17 +1,17 @@
 <!-- default file list -->
 *Files to look at*:
-* [Startup.cs](./CS/EndUserDesignerExample/Startup.cs) 
-* [MyReportStorageWebExtension.cs](./CS/EndUserDesignerExample/Services/MyReportStorageWebExtension.cs)
-* [Index.cshtml](./CS/EndUserDesignerExample/Views/Home/Index.cshtml)
+* [Index.cshtml](./CS/SimpleAspNetCoreReportingDesigner/Views/Home/Index.cshtml)
+* [Startup.cs](./CS/SimpleAspNetCoreReportingDesigner/Startup.cs) 
+* [CustomReportStorageWebExtension.cs](./CS/SimpleAspNetCoreReportingDesigner/Services/CustomReportStorageWebExtension.cs) 
+* [_Layout.cshtml](./CS/SimpleAspNetCoreReportingDesigner/Views/Shared/_Layout.cshtml)
 <!-- default file list end -->
 
-# How to Add an End-User Report Designer to an ASP.NET Core Application
+# How to Add the Document Viewer to an ASP.NET Core 2.1 Application
 
-This example is the resulting project if you follow the steps described in the [Add an End-User Report Designer to an ASP.NET Core Application](https://docs.devexpress.com/XtraReports/400042) document.
+This example is the resulting project if you follow the steps described in the [Add an End-User Report Designer to an ASP.NET Core 2.1 Application](https://docs.devexpress.com/XtraReports/400042) document.
 
-The report in this example is created as the [Create a Report in Visual Studio](docs.devexpress.devx/XtraReports/14989#table-report) document describes. The report is bound to the Products table of the Northwind database attached to the localhost Microsoft SQL Server.
 
-> Update the project's NuGet packages before running this project.
-> Restore packages (listed in the [package.json](./CS/EndUserDesignerExample/package.json) file) before running this project.
+> Restore packages (listed in the [package.json](./CS/SimpleAspNetCoreReportingDesigner/package.json) file) before running this project. For more information review the following article: [Restore packages using Package Restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore).
 
-![](images/screenshot.png)
+
+![screenshot](images/screenshot.png)
