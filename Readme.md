@@ -14,7 +14,7 @@
 
 This example is the resulting project if you follow the steps described in the [Add an End-User Report Designer to an ASP.NET Core Application](https://docs.devexpress.com/XtraReports/400042) document.
 
-The report in this example is created as the [Create a Report in Visual Studio](docs.devexpress.com/XtraReports/14989#table-report) document describes. The report is bound to the Products table of the Northwind database attached to the localhost Microsoft SQL Server.
+The report in this example is created as the [Create a Report in Visual Studio](https://docs.devexpress.com/XtraReports/14989#table-report) document describes. The report is bound to the Products table of the Northwind database attached to the localhost Microsoft SQL Server.
 
 > Update the project's NuGet packages before running this project.
 > Restore packages (listed in the [package.json](./CS/EndUserDesignerExample/package.json) file) before running this project.
