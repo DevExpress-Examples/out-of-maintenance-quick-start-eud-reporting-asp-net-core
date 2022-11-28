@@ -20,11 +20,10 @@ namespace SimpleAspNetCoreReportingDesigner
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddDevExpressControls();
             services.AddScoped<ReportStorageWebExtension, Services.CustomReportStorageWebExtension>();
-            services
-                .AddMvc()
-                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
+
             services.ConfigureReportingServices(configurator =>
             {
                 configurator.ConfigureReportDesigner(designerConfigurator =>
@@ -43,6 +42,8 @@ namespace SimpleAspNetCoreReportingDesigner
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             DevExpress.XtraReports.Configuration.Settings.Default.UserDesignerOptions.DataBindingMode = DevExpress.XtraReports.UI.DataBindingMode.Expressions;
+            
+            
             app.UseDevExpressControls();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             if (env.IsDevelopment())
@@ -50,11 +51,10 @@ namespace SimpleAspNetCoreReportingDesigner
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+
+            app.UseRouting();
+            app.UseEndpoints(configure => {
+                configure.MapDefaultControllerRoute();
             });
         }
     }
